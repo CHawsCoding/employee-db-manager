@@ -11,9 +11,9 @@ const {
 } = require("./lib/queries");
 const { displayTable } = require("./lib/utils");
 
-// Function to start the application and prompt user with 
-// their options to interact with the employeeDB
+// Function to start the application
 function startApp() {
+  // Prompt the user with options
   inquirer
     .prompt([
       {
@@ -33,7 +33,7 @@ function startApp() {
       },
     ])
     .then((answer) => {
-      // Depending on the users selection - call the corresponding function.
+      // Based on the user's choice, call the appropriate function
       switch (answer.action) {
         case "View all departments":
           viewAllDepartments();
